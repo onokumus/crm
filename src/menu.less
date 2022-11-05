@@ -1,0 +1,425 @@
+@import "variables.less";
+@import "mixins.less";
+
+/* ==================================================
+
+CSS3 Responsive Menu
+Author	: https://github.com/onokumus
+Date	: Sunday, March 03, 2013 16:43 PM
+Version	: 1.0
+
+===================================================== */
+
+
+/* --------------------------------------------------
+	NAVBAR GLOBAL
+	----------------------------------------------------- */
+	.nav-bar {
+		position: relative;
+		background-color: @navBarBacgroundColor;
+		height: @navBarHeight;
+
+		&, & ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		ul {
+			background-color: #fff;
+			min-width: @grid1Width;
+		}	
+		a {
+			text-decoration: none;
+			color: #333;
+			padding: 0 20px;
+			display: block;		
+		}
+		.arrow:after {
+			display: block;
+			float: right;
+			width: 0;
+			height: 0;
+			.verticalArrowMarginTop (@navBarHeight);
+			margin-right: -10px;
+			border: 5px solid transparent;
+			content: " ";
+		}
+		.clear_float();
+	}
+	/* end navbar global */
+
+/* -----------------------------------------------------------------------
+	NAVBAR COLLAPSE
+	-------------------------------------------------------------------------- */
+	.collapse-link {
+		background-color: #000;
+		color: #fff;
+                font-weight: 700;
+		.lineHeight (@navBarHeight);
+		padding-left: 20px;
+		padding-right: 20px; 
+
+  text-decoration: none;
+  text-shadow: 0 1px 0 #000; 
+  &:hover, &:active, &:focus {
+      color: #fff;
+  text-decoration: none;
+        }
+		span {float: right;}
+  .clear_float();
+}
+.lt-ie8 .collapse-link{
+    display: none; /* for ie7 and ie8 */
+}
+/* -----------------------------------------------------------------------
+	FULL MENU
+	-------------------------------------------------------------------------- */
+	.full-menu {
+		position: absolute;		
+		border:1px solid @borderColor;
+		border-top: 0;
+		z-index:1000;
+		background:#fff;
+		padding: 10px 0;
+		line-height: 20px !important; /* reset line-height */
+		display: none;
+                *zoom: 1; /*ie 7*/
+
+
+		[class^="grid-"] {
+			float: left;
+			padding-left:10px;
+			padding-right:10px;
+		}
+		.grid-6 {
+			width: @grid1Width * 6;
+		}
+
+		.grid-5 {
+			width: 5*@grid1Width ;
+		}
+		.grid-4 {
+			width: 4*@grid1Width ;
+		}
+		.grid-3 {
+			width: 3*@grid1Width ;
+		}
+		.grid-2 {
+			width: 2*@grid1Width ;
+		}
+		.grid-1 {
+			width: @grid1Width ;
+		}
+
+		a {
+			padding: 0;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.clear_float();
+	}
+	/* end full menu */
+
+/* -----------------------------------------------------------------------
+	FULL MENU FULL WIDTH
+	-------------------------------------------------------------------------- */
+	.full-width {
+		left:0;
+		right:0;
+
+		[class^="grid-"] {
+			padding-left: 1%;
+			padding-right: 1%;
+		}
+		.grid-6 {
+			width: 98%;
+		}
+
+		.grid-5 {
+			width: 81.33333333333334%;
+		}
+		.grid-4 {
+			width: 64.66666666666666%;
+		}
+		.grid-3 {
+			width: 48%;
+		}
+		.grid-2 {
+			width: 31.33333333333333%;
+		}
+		.grid-1 {
+			width: 14.666666666666664%;
+		}
+	}
+	/* ------------ end full menu full width ------------- */
+
+
+
+/* ---------------------------------------------------
+	NAVBAR LIST ITEM FIST LEVEL
+	------------------------------------------------------ */
+	.nav-bar > li {
+		float: left;
+		line-height: @navBarHeight;
+		display: block;
+
+
+
+
+		> a {
+			color: #fff;
+			font-weight: 700;
+			font-style: normal;
+			text-shadow: 0 1px 0 #000;
+
+			&.arrow {
+				padding-right: 40px;
+
+				&:after {
+					border-color: #fff transparent transparent;
+					margin-right: -20px;
+					.arrowMarginTop (@navBarHeight);
+				}
+			}
+		}
+
+		&:hover, &.active {
+			.navListBackgroundColor (@navBarBacgroundColor);
+		}
+	}
+	/* NAVBAR LIST ITEM TO RIGHT */
+	.nav-bar > li.right {
+		float: right;
+		&:hover > ul {
+			left: auto;
+			right: 0;
+		}
+	}
+
+	/* end navbar list item first level */
+
+
+/* ---------------------------------------------------
+	NAVBAR LIST ITEM SECOND LEVEL
+	------------------------------------------------------ */
+	.nav-bar > li > ul {
+		position: absolute;
+		display: none;
+		z-index: 1010;
+		border-left: 1px solid @borderColor;
+		border-right: 1px solid @borderColor;
+		border-top: 1px solid transparent;
+
+		li {
+			display: block;
+			.lineHeight (@navBarHeight);
+			position: relative;
+			border-bottom: 1px solid @borderColor;
+
+			.arrow:after {
+				border-left-color: #fff;
+			}
+
+			&.to-left {
+				> .arrow:after {
+					border-color:transparent #fff transparent transparent;
+					margin-right: -5px;
+				}
+				> ul {
+					left: auto;
+					right: 100%;
+				}
+			}
+		}
+	}
+	/* end navbar list item second level */
+
+/* ---------------------------------------------------
+	NAVBAR LIST ITEM THIRD LEVEL
+	------------------------------------------------------ */
+	.nav-bar > li > ul li {
+
+		&:hover {
+			background-color: @navListBackgroundHighlightColor;
+
+			> a {
+				color: @navListBackgroundColor;
+			}		
+		}
+		> ul {
+			position: absolute;
+			display: none;
+			left: 100%;
+			top:-1px;
+			z-index: 1020;
+			border: 1px solid @borderColor;
+			border-bottom: 0;
+		}
+	}
+	/* end navbar list item second level */
+
+
+
+/* --------------------------------------------------------
+	VERTICAL NAVBAR
+	----------------------------------------------------------- */
+
+	.nav-bar.vertical {
+		height: auto;
+
+		> li {
+			float: none;
+			.lineHeight (@navBarHeight);
+			position: relative;
+
+			&:last-child {
+				border-bottom: none !important;
+			}
+			> a {
+			//border-bottom: 1px solid @navLinkBorderColor;
+
+			&.arrow {
+				padding-right:20px;
+
+				&:after {
+					.verticalArrowMarginTop (@navBarHeight);
+					margin-right: -10px;
+					border-color: transparent;
+					border-left-color: #fff;
+				}
+			}
+		}
+		
+		> ul {
+			border-top: 1px solid @borderColor;
+			left: 100%;
+			top:0;
+		}
+		&.right:hover > ul {
+			left: 100%;
+		}
+	}
+} 
+/* end .nav-bar.vertical */
+
+
+/* ---------------------------------------------------------------------
+for ie7 and ie8 
+----------------------------------------------------------------------*/
+.lt-ie9 .nav-bar li:hover > ul,
+.lt-ie9 .nav-bar li:hover > .full-menu {
+    display: block;
+}
+
+/* -----------------------------------------------------------------------
+	MEDIA QUERIES
+	-------------------------------------------------------------------------- */
+	@media (min-width: 768px) {
+		.collapse-link {display:none;}
+		.nav-bar {display: block;}
+		.nav-bar li:hover {
+			& > ul, & > .full-menu {
+				display: block;
+			}
+		}
+	}
+
+	@media screen and (max-width: 767px) {
+
+		.full-menu [class^="grid-"] {
+			float: none;
+			width: 98%;
+		}
+		.nav-bar {
+			height: auto;
+			z-index: 999;
+
+			li {
+				float: none !important;
+				&.to-left > a.arrow:after {
+					margin-right: -10px;
+				}
+			}
+			ul {
+				position: relative !important;
+				width: 100% !important;
+				left:0 !important;
+				top:0;
+				margin-bottom: 1px;
+				border-left: 0 !important;
+				border-right: 0 !important;
+
+				.clear_float();
+
+			}
+			.full-menu {
+				position: relative !important;
+
+			}
+
+
+			> li {
+				.lineHeight (@navBarHeight);
+				> a {
+				//border-bottom: 1px solid @navLinkBorderColor;	
+			}
+			a.arrow:after {
+				border-color: #CCCCCC transparent transparent !important;
+			}
+			&:last-child a {
+				border-bottom: 0;
+			}
+			> ul {
+				border-top: 1px solid @borderColor;
+				left: 100%;
+				top:0;
+			} // end .nav-bar > li > ul
+			
+		} // end .nav-bar > li
+
+		li > a:focus + ul {
+			display: block !important;
+		}
+		li > a:focus + .full-menu {
+			display: block !important;
+		}
+		li ul:hover {display: block !important;}
+	}
+	.collapse-link {display: block;}
+	.collapse-link + .nav-bar {
+		display: none;
+	}
+	.collapse-link:focus + .nav-bar {
+		display: block;
+	}
+	.collapse-link + .nav-bar:hover {
+		display: block;
+	}
+}
+
+
+/* ==================================================
+
+CREATE CUSTOM COLOR FOR MENU
+
+.createNavColor ("menu class name", "menu background color", "menu hover color");
+
+===================================================== */
+
+.createNavColor (style-1, #344150, #0070A8);
+.createNavColor (style-2, #222, #005580);
+.createNavColor (style-3, #262A40, #8C3F63);
+.createNavColor (style-4, #E58D00, #402768);
+.createNavColor (style-5, #FFAD29, #FF2151);
+.createNavColor (style-6, #688F5C, #252333);
+.createNavColor (style-7, #403D2F, #D92759);
+.createNavColor (style-8, #70604C, #0C3045);
+.createNavColor (style-9, #8C4D3F, #59302C);
+.createNavColor (style-10, #333, #5C8A2D);
+.createNavColor (style-11, #395059, #8C1B2F);
+.createNavColor (style-12, #5C8A2D, #283A9C);
+.createNavColor (style-13, #9C7D00, #8A1334);
+.createNavColor (style-14, #872A0C, #222);

@@ -1,0 +1,73 @@
+
+
+// MIXINS
+// Clearfix
+.clear_float() {
+    *zoom: 1;
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    // Fixes Opera/contenteditable bug:
+        // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+        line-height: 0;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.lineHeight (@navBarHeight) when (@navBarHeight =< 40px) {
+    line-height: 40px;
+}
+.lineHeight (@navBarHeight) when (@navBarHeight > 40px) {
+    line-height: @navBarHeight * 0.8;
+}
+.arrowMarginTop (@navBarHeight) {
+    margin-top: (@navBarHeight * 0.8 + @navBarFontSize) / 2 - 5px;
+}
+.verticalArrowMarginTop (@navBarHeight) when (@navBarHeight =< 40px) {
+    margin-top: 15px;
+}
+.verticalArrowMarginTop (@navBarHeight) when (@navBarHeight > 40px) {
+    margin-top: (@navBarHeight * 0.4 )  - 5px;
+}
+
+.navListBackgroundColor (@navBarBacgroundColor) when  (lightness(@navBarBacgroundColor) >= 50%) {
+    background-color: darken(@navBarBacgroundColor,15%);
+}
+
+.navListBackgroundColor (@navBarBacgroundColor) when  (lightness(@navBarBacgroundColor) < 50%) {
+    background-color: lighten(@navBarBacgroundColor,15%);
+}
+
+.createNavColor (@name, @color, @hoverColor) {
+
+    @var: ~'@{name}';
+
+
+    .nav-bar.@{var} {
+        background-color: @color;
+
+
+
+        > li {
+
+            > ul li:hover > a {
+                color: @hoverColor;
+            }
+            &:hover, &.active {
+                background: @hoverColor; /* Old browsers */
+                background: -moz-linear-gradient(top, lighten(@hoverColor,10%) 0%, @hoverColor 100%); /* FF3.6+ */
+                background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,lighten(@hoverColor,10%)), color-stop(100%,@hoverColor)); /* Chrome,Safari4+ */
+                background: -webkit-linear-gradient(top, lighten(@hoverColor,10%) 0%,@hoverColor 100%); /* Chrome10+,Safari5.1+ */
+                background: -o-linear-gradient(top, lighten(@hoverColor,10%) 0%,@hoverColor 100%); /* Opera 11.10+ */
+                background: -ms-linear-gradient(top, lighten(@hoverColor,10%) 0%,@hoverColor 100%); /* IE10+ */
+                background: linear-gradient(to bottom, lighten(@hoverColor,10%) 0%,@hoverColor 100%); /* W3C */
+                filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",lighten(@hoverColor,10%),@hoverColor));/* IE6-9 */
+
+            }
+
+        }
+    }
+}

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>CSS3 Horizontal Menu</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../../menu.css">
+</head>
+<body>
+    <div class="wrap">
+        <h4>CSS3 Responsive Menu <small>Horizontal</small></h4>
+        <hr>
+        <h6>Default Color</h6>
+        <!-- begin default color menu -->
+        <nav>
+            <a class="collapse-link" href="#" tabindex="1">Menu <span>+</span></a>
+            <ul class="nav-bar">
+                <li><a tabindex="1" href="index.html"><i class="icon-home"></i> Home</a></li>
+                <li class="active">
+                    <a tabindex="1" class="arrow" href="#">About</a>
+                    <div class="full-menu">
+                        <div class="grid-1">
+                            <img src="" alt="">
+                        </div>
+                        <div class="grid-1">
+                            <ul>
+                                <li><a href="#">link 1</a></li>
+                                <li><a href="#">link 2</a></li>
+                                <li><a href="#">link 3</a></li>
+                                <li><a href="#">link 4</a></li>
+                                <li><a href="#">link 5</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a tabindex="1" href="#" class="arrow">item 3</a>
+                    <ul>
+                        <li>
+                            <a tabindex="1" href="#" class="arrow">item 3.3</a>
+                            <ul>
+                                <li><a href="#">item 3.3.1</a></li>
+                                <li><a href="#">item 3.3.2</a></li>
+                                <li>
+                                    <a tabindex="1" href="#" class="arrow">item 3.3.3</a>
+                                    <ul>
+                                        <li><a href="#">item 3.3.3.1</a></li>
+                                        <li><a href="#">item 3.3.3.2</a></li>
+                                        <li><a href="#">item 3.3.3.3</a></li>
+                                        <li><a href="#">item 3.3.3.4</a></li>
+                                    </ul>
+                                </li>
+                                <li class="to-left">
+                                    <a tabindex="1" href="#" class="arrow">item 3.3.4</a>
+                                    <ul>
+                                        <li><a href="#">item 3.3.4.1</a></li>
+                                        <li><a href="#">item 3.3.4.2</a></li>
+                                        <li><a href="#">item 3.3.4.3</a></li>
+                                        <li><a href="#">item 3.3.4.4</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#">item 3.1</a></li>
+                        <li><a href="#">item 3.2</a></li>
+                        
+                        <li><a href="#">item 3.4</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a tabindex="1" class="arrow" href="#"><i class="icon-user"></i> Login</a>
+                    <div class="full-menu">
+                        <div class="grid-2">
+                            <form action="" style="padding-left:10px;">
+                                <input type="text" placeholder="username">
+                                <br>
+                                <input type="password" placeholder="password">
+                                <br>
+                                <input class="btn" type="button" value="Sign in">
+                            </form>
+                        </div>
+                    </div>
+                </li>
+                <li class="right">
+                    <a tabindex="1" class="arrow" href="#"><i class="icon-align-right"></i> Right</a>
+                    <ul>
+                        <li><a href="#">Right 1</a></li>
+                        <li><a href="#">Right 2</a></li>
+                        <li><a href="#">Right 3</a></li>
+                        <li class="to-left">
+                            <a tabindex="1" href="#" class="arrow">Right 4</a>
+                            <ul>
+                                <li><a href="#">Right 4.1</a></li>
+                                <li><a href="#">Right 4.2</a></li>
+                                <li class="to-left">
+                                    <a tabindex="1" href="#" class="arrow">Right 4.3</a>
+                                    <ul>
+                                        <li><a href="#">Right 4.3.1</a></li>
+                                        <li><a href="#">Right 4.3.2</a></li>
+                                        <li><a href="#">Right 4.3.3</a></li>
+                                        <li><a href="#">Right 4.3.4</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Right 4.4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!-- end default color menu -->
+        
+        <h6>Style 1</h6>
+        <!-- begin style-1 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-1">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-1 menu -->
+
+        <h6>Style 2</h6>
+        <!-- begin style-2 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-2">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-2 menu -->
+
+        <h6>Style 3</h6>
+        <!-- begin style-3 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-3">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-3 menu -->
+
+        <h6>Style 4</h6>
+        <!-- begin style-4 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-4">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-4 menu -->
+
+        <h6>Style 5</h6>
+        <!-- begin style-5 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-5">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-5 menu -->
+
+        <h6>Style 6</h6>
+        <!-- begin style-6 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-6">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-6 menu -->
+
+        <h6>Style 7</h6>
+        <!-- begin style-7 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-7">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-7 menu -->
+
+        <h6>Style 8</h6>
+        <!-- begin style-8 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-8">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-8 menu -->
+
+        <h6>Style 9</h6>
+        <!-- begin style-9 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-9">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-9 menu -->
+
+        <h6>Style 10</h6>
+        <!-- begin style-10 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-10">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-10 menu -->
+
+        <h6>Style 11</h6>
+        <!-- begin style-11 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-11">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-11 menu -->
+
+        <h6>Style 12</h6>
+        <!-- begin style-12 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-12">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-12 menu -->
+
+        <h6>Style 13</h6>
+        <!-- begin style-13 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-13">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-13 menu -->
+
+        <h6>Style 14</h6>
+        <!-- begin style-14 menu -->
+        <nav>
+            <a href="#" tabindex="1" class="collapse-link">Menu <span>+</span></a>
+            <ul class="nav-bar style-14">
+                <li class="active"><a href="#"><i class="icon-home"></i> Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+                <li class="right"><a href="#"><i class="icon-sitemap"></i> Site Map</a></li>
+            </ul>
+        </nav>
+        <!-- end style-14 menu -->
+    </div>
+    <!-- end wrapper -->
+</body>
+</html>

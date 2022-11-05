@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Le styles -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">
+        <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+        <link href="assets/css/docs.css" rel="stylesheet">
+        <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+        <link href="../menu.css" rel="stylesheet">
+
+        <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+          <script src="assets/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+
+        <!-- Navbar
+    ================================================== -->        
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <a href="#" class="collapse-link">Menu <span>+</span></a>
+                    <ul class="nav-bar style-1">                        
+                        <li class="active"><a href="index.html"><i class="icon-home icon-white"></i> Documents</a></li>
+                        <li><a href="demo/horizontal.html">horizontal menu</a></li>
+                        <li><a href="demo/vertical.html">vertical menu</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Subhead
+        ================================================== -->
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="well">
+                        <h1>Getting started</h1>
+                    </div>
+                </div> 
+            </div>    
+        </div>
+
+
+        <div class="container">
+            <!-- Docs nav
+    ================================================== -->
+            <div class="row">
+                <div class="span3">
+                    <ul class="nav-bar vertical style-4">
+                        <li><a href="#html-template">Basic Html template</a></li>
+                        <li><a href="#default-menu">Default Menu</a></li>
+                        <li><a href="#vertical-menu">Vertical Menu</a></li>
+                        <li><a href="#create-custom-color">Create custom color</a></li>
+                        <li><a href="#create-custom-color">Create Custom Color With LESS</a></li>
+                    </ul>
+                </div>
+
+                <div class="span9">
+
+                    <!-- HTML template
+        ================================================== -->
+                    <section id="html-template">
+                        <div class="page-header">
+                            <h1>1. Basic HTML template</h1>
+                        </div>
+                        <p class="lead">
+                           If you want to be compatible with Internet Explorer 7 or 8, you need to use a template as follows.
+                        </p>
+                        <pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;!--[if lt IE 7]&gt;      &lt;html class="no-js lt-ie9 lt-ie8 lt-ie7"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 7]&gt;         &lt;html class="no-js lt-ie9 lt-ie8"&gt; &lt;![endif]--&gt;
+&lt;!--[if IE 8]&gt;         &lt;html class="no-js lt-ie9"&gt; &lt;![endif]--&gt;
+&lt;!--[if gt IE 8]&gt;&lt;!--&gt; &lt;html class="no-js"&gt; &lt;!--&lt;![endif]--&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;link href="menu.css" rel="stylesheet"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+  &lt;/body&gt;
+&lt;/html&gt;</pre>
+                    </section>
+
+                    <!-- Default Menu
+        ================================================== -->
+                    <section id="default-menu">
+                        <div class="page-header">
+                            <h1>2. Default Menu</h1>
+                        </div>
+                        <h2>Example</h2>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar"&gt;
+ &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <h2>Options</h2>
+                        <p>Align menus to the right and add include additional levels of dropdowns.</p>
+
+                        <!-- Aligning the menus -->
+                        <h3>Aligning the menus</h3>
+                        <p>Add class <code>.right</code> to <code>&lt;li&gt;</code> element.</p>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="right"><a href="#">Right Item</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar"&gt;
+ &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+ &lt;li class="right"&gt;&lt;a href="#"&gt;Right Item&lt;/a&gt;
+&lt;/ul&gt;</pre>
+
+                        <!-- Active Elements -->
+                        <h3>Active Elements</h3>
+                        <p>Add class <code>.active</code> to <code>&lt;li&gt;</code> element.</p>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active"><a href="about.html">About</a></li>
+                                <li class="right"><a href="#">Right Item</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar"&gt;
+ &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li class="active"&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+ &lt;li class="right"&gt;&lt;a href="#"&gt;Right Item&lt;/a&gt;
+&lt;/ul&gt;</pre>
+
+                        <!-- Sub menus -->
+                        <h3>Sub menus</h3>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar">
+                                <li><a href="index.html">Home</a></li>
+                                <li>
+                                    <a href="#" tabindex="-1" class="arrow">Pages</a>
+                                    <ul>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li><a href="#">Portfolio</a></li>
+                                        <li><a href="#">Other</a></li>
+                                    </ul>
+                                </li>
+                                <li class="right"><a href="#">Right Item</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar"&gt;
+  &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" tabindex="-1" class="arrow"&gt;Pages&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Portfolio&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Other&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li class="right"&gt;&lt;a href="#"&gt;Right Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+                        <!-- Sub menus on dropdowns-->
+                        <h3>Sub menus on dropdowns</h3>
+                        <h4>Default Options</h4>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar">
+                                <li><a href="index.html">Home</a></li>
+                                <li>
+                                    <a href="#" tabindex="-1" class="arrow">Pages</a>
+                                    <ul>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li>
+                                            <a href="#" tabindex="-1" class="arrow">Portfolio</a>
+                                            <ul>
+                                                <li><a href="#">Portfolio 1 column</a></li>
+                                                <li><a href="#">Portfolio 2 column</a></li>
+                                                <li><a href="#">Portfolio 3 column</a></li>
+                                                <li><a href="#">Portfolio 4 column</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Other</a></li>
+                                    </ul>
+                                </li>
+                                <li class="right"><a href="#">Right Item</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar"&gt;
+  &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" tabindex="-1" class="arrow"&gt;Pages&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;
+        &lt;a href="#" tabindex="-1" class="arrow"&gt;Portfolio&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portfolio 1 column&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portfolio 2 column&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portfolio 3 column&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portfolio 4 column&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Other&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li class="right"&gt;&lt;a href="#"&gt;Right Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                        </pre>
+                        <h4>Left submenu</h4>
+                        <p>Add class <code>.to-left</code> to <code>&lt;li&gt;</code> element.</p>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar">
+                                <li><a href="index.html">Home</a></li>
+                                <li>
+                                    <a href="#" tabindex="-1" class="arrow">Pages</a>
+                                    <ul>
+                                        <li><a href="#">Gallery</a></li>
+                                        <li class="to-left">
+                                            <a href="#" tabindex="-1" class="arrow">Portfolio</a>
+                                            <ul>
+                                                <li><a href="#">Portfolio 1 column</a></li>
+                                                <li><a href="#">Portfolio 2 column</a></li>
+                                                <li><a href="#">Portfolio 3 column</a></li>
+                                                <li><a href="#">Portfolio 4 column</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Other</a></li>
+                                    </ul>
+                                </li>
+                                <li class="right"><a href="#">Right Item</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar"&gt;
+  &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" tabindex="-1" class="arrow"&gt;Pages&lt;/a&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Gallery&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="to-left"&gt;
+        &lt;a href="#" tabindex="-1" class="arrow"&gt;Portfolio&lt;/a&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portfolio 1 column&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portfolio 2 column&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portfolio 3 column&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Portfolio 4 column&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Other&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li class="right"&gt;&lt;a href="#"&gt;Right Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+                        <!-- Full Menus on dropdown -->
+                        <h3>Full Menus on dropdown</h3>
+                        <p>
+                            Add <code>&lt;div&gt;</code> element with <code>.full-menu</code> class.
+                        </p>
+                        <p>
+                            Add sub tags <code>&lt;div&gt;</code> with <code>.grid-1</code> 
+                            or <code>.grid-2</code>
+                            or <code>.grid-3</code>
+                            or <code>.grid-4</code>
+                            or <code>.grid-5</code>
+                            or <code>.grid-6</code>
+                            class.
+                        </p>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar">
+                                <li><a href="index.html">Home</a></li>
+                                <li>
+                                    <a href="#" tabindex="-1" class="arrow">Full Menu</a>
+                                    <div class="full-menu">
+                                        <div class="grid-1">
+                                            <h5>Latest Posts</h5>
+                                            <ul>
+                                                <li><a href="#">Post 1</a></li>
+                                                <li><a href="#">Post 2</a></li>
+                                                <li><a href="#">Post 3</a></li>
+                                                <li><a href="#">Post 4</a></li>
+                                                <li><a href="#">Post 5</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="grid-2">
+                                            <h5>Paragraph</h5>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                            </p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="right"><a href="#">Right Item</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar"&gt;
+  &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" tabindex="-1" class="arrow"&gt;Full Menu&lt;/a&gt;
+    &lt;div class="full-menu"&gt;
+      &lt;div class="grid-1"&gt;
+        &lt;h5&gt;Latest Posts&lt;/h5&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 3&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 4&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="grid-2"&gt;
+        &lt;h5&gt;Paragraph&lt;/h5&gt;
+        &lt;p&gt;Lorem ipsum dolor sit ...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="right"&gt;&lt;a href="#"&gt;Right Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+                        <h3>Full width Menus on dropdown</h3>
+                        <p>
+                            Add <code>&lt;div&gt;</code> element with <code>.full-menu .full-width</code> class.
+                        </p>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar">
+                                <li><a href="index.html">Home</a></li>
+                                <li>
+                                    <a href="#" tabindex="-1" class="arrow">Full Menu</a>
+                                    <div class="full-menu full-width">
+                                        <div class="grid-1">
+                                            <h5>Latest Posts</h5>
+                                            <ul>
+                                                <li><a href="#">Post 1</a></li>
+                                                <li><a href="#">Post 2</a></li>
+                                                <li><a href="#">Post 3</a></li>
+                                                <li><a href="#">Post 4</a></li>
+                                                <li><a href="#">Post 5</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="grid-3">
+                                            <h5>Paragraph</h5>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                                                magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                            </p>
+                                        </div>
+                                        <div class="grid-2">
+                                            <h5>Image</h5>
+                                            <img src="" alt="" />
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="right"><a href="#">Right Item</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar"&gt;
+  &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" tabindex="-1" class="arrow"&gt;Full Menu&lt;/a&gt;
+    &lt;div class="full-menu full-width"&gt;
+      &lt;div class="grid-1"&gt;
+        &lt;h5&gt;Latest Posts&lt;/h5&gt;
+        &lt;ul&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 3&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 4&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Post 5&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/div&gt;
+      &lt;div class="grid-5"&gt;
+        &lt;h5&gt;Paragraph&lt;/h5&gt;
+        &lt;p&gt;Lorem ipsum dolor sit ...&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="right"&gt;&lt;a href="#"&gt;Right Item&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                    </section>
+
+                    <!-- Vertical Menu
+        ================================================== -->
+                    <section id="vertical-menu">
+                        <div class="page-header">
+                            <h1>3. Vertical Menu</h1>
+                        </div>
+                        <h2>Example</h2>
+                        <p>
+                            Add class <code>.vertical</code> to menu.
+                        </p>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar vertical">
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar vertical"&gt;
+ &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                    </section>
+
+                    <!-- Color Options
+        ================================================== -->
+                    <section id="color-options">
+                        <div class="page-header">
+                            <h1>4. Color Options</h1>
+                        </div>                        
+                        <h2>Examples</h2>
+                        <p>Add class <code>.style-n</code> to menu. The number n is a value from 1 to 14.</p>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-1">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-1"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-2">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-2"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-3">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-3"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-4">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-4"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-5">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-5"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-6">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-6"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-7">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-7"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-8">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-8"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-9">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-9"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-10">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-10"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-11">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-11"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-12">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-12"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-13">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-13"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                        <div class="bs-docs-example">
+                            <ul class="nav-bar style-14">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;ul class="nav-bar style-14"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+                    </section>
+
+                    <!-- Responsive Menu
+        ================================================== -->
+
+                    <section id="responsive-menu">
+                        <div class="page-header">
+                            <h1>5. Responsive Menu</h1>
+                            <p class="lead">
+                                Add <code>&lt;a&gt;</code> element with <code>.collapse-link</code> class of the menu before
+                            </p>
+                        </div>
+                        <h2>Examples</h2>
+                        <div class="bs-docs-example">
+                            <a href="#" class="collapse-link" tabindex="-1" style="display: block;">Menu <span>+</span></a>
+                            <ul class="nav-bar style-1">
+                                <li class="active"><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </div>
+                        <pre class="prettyprint linenums">
+&lt;a href="#" class="collapse-link" tabindex="-1"&gt;Menu &lt;span&gt;+&lt;/span&gt;&lt;/a&gt;
+&lt;ul class="nav-bar style-1"&gt;
+  &lt;li class="active"&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+                    </section>
+
+                    <!-- Create Custom Color With LESS
+        ================================================== -->
+
+                    <section id="create-custom-color">
+                        <div class="page-header">
+                            <h1>6. Create Custom Color With LESS</h1>
+                        </div>
+                        <p>
+                            Open the file <code>menu.less</code> in the <code>less</code> folder.
+                            Add the following code to the end of this file.
+                        </p>
+                        <pre class="prettyprint linenums">.createNavColor (style-name, background-color, hover-color);</pre>
+                        
+                        <p>
+                            After that, compile <code>menu.less</code> file. For example, the console
+                        </p>
+                        <pre class="prettyprint linenums">lessc menu.less > menu.css</pre>
+                    </section>
+
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Le javascript
+================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="assets/js/jquery.js"></script>
+        <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+        <script src="assets/js/application.js"></script>
+    </body>
+</html>
